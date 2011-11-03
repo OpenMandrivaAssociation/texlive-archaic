@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/archaic
+# catalog-date 2006-11-08 11:10:08 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-archaic
 Version:	20061108
 Release:	1
@@ -260,6 +266,7 @@ file for the whole collection.
 %doc %{_texmfdistdir}/source/fonts/archaic/ugarite.ins
 %doc %{_texmfdistdir}/source/fonts/archaic/viking.dtx
 %doc %{_texmfdistdir}/source/fonts/archaic/viking.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -270,3 +277,5 @@ file for the whole collection.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
