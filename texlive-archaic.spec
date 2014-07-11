@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-archaic
 Version:	20061108
-Release:	7
+Release:	8
 Summary:	A collection of archaic fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/archaic
