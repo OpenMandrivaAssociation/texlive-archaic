@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /fonts/archaic
-# catalog-date 2006-11-08 11:10:08 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-archaic
-Version:	20190228
+Version:	38005
 Release:	1
 Summary:	A collection of archaic fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/archaic
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.r38005.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.doc.r38005.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.source.r38005.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ The bundle's own directory includes a font installation map
 file for the whole collection.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -259,25 +253,11 @@ file for the whole collection.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20061108-2
-+ Revision: 749343
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20061108-1
-+ Revision: 717850
-- texlive-archaic
-- texlive-archaic
-- texlive-archaic
-- texlive-archaic
-- texlive-archaic
-
