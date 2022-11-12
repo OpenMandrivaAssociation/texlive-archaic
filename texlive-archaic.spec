@@ -5,9 +5,9 @@ Summary:	A collection of archaic fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/archaic
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.r38005.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.doc.r38005.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.source.r38005.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/archaic.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
